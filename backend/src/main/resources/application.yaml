@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: exchangeSim-backend
+  config:
+    import: optional:file:../.env[.properties]
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ledger
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASS}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          health
+  endpoint:
+    health:
+      show-components: always
