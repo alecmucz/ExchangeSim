@@ -1,8 +1,38 @@
+# env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# java / gradle
 .gradle/
+.kotlin/
 build/
-.idea/
-*.iml
 out/
+bin/
+*.class
+
+# c++
+cmake-build-*/
+*.o
+*.a
+*.so
+
+# node
 node_modules/
 dist/
-.env
+
+# postgres
+postgres/data/
+
+# ide
+.idea/
+*.iml
+.vscode/
+
+# os
+.DS_Store
+
+# logs
+*.log
