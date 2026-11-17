@@ -25,7 +25,7 @@ Paper trading. Orders fill at the live market price, so there's no matching engi
 | `frontend/` | React app                         |
 | `mdp/`      | Market Data Platform (C++)        |
 | `engine/`   | Matching Engine (C++) (not started)     |
-| `postgres/` | Schemas for ledger and market data |
+| `_postgres` | Schemas for ledger and market data |
 
 ## Status
 

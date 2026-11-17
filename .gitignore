@@ -24,7 +24,7 @@ node_modules/
 dist/
 
 # postgres
-postgres/data/
+schemas/postgres/data/
 
 # ide
 .idea/
@@ -35,4 +35,5 @@ postgres/data/
 .DS_Store
 
 # logs
-*.log
+*.logmdp/build/
+mdp/vcpkg_installed/
