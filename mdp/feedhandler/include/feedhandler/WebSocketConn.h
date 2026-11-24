@@ -10,6 +10,7 @@
 namespace mdp::feedhandler{
 namespace net   = boost::asio;
 namespace beast = boost::beast;
+using tcp = boost::asio::ip::tcp;
 
 class WebSocketConn{
 private:
@@ -20,8 +21,11 @@ private:
     net::ssl::context ssl_ctx;
     beast::websocket::stream<beast::ssl_stream<beast::tcp_stream>> ws{io_ctx, ssl_ctx};
 
+
 public:
     WebSocketConn(std::string host, uint16_t port, std::string path);
+    void connect();
+
 
 };
 }

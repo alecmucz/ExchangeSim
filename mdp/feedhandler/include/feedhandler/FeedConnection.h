@@ -1,4 +1,11 @@
 #pragma once
 
-class FeedConnection{
-};
+#include <concepts>
+#include <cstdint>
+#include <string>
+
+namespace mdp::feedhandler{
+
+template<class T>
+concept FeedConnection = requires(T c ) {}
+}
