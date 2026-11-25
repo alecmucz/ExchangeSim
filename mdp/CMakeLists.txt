@@ -10,6 +10,8 @@ set(MDP_PROTO_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../schemas/proto)
 
 # Dependencies
 find_package(Protobuf CONFIG REQUIRED)
+find_package(boost_beast CONFIG REQUIRED)
+find_package(OpenSSL REQUIRED)
 
 # Components
 add_subdirectory(common)

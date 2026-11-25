@@ -20,12 +20,14 @@ private:
     net::io_context io_ctx;
     net::ssl::context ssl_ctx;
     beast::websocket::stream<beast::ssl_stream<beast::tcp_stream>> ws{io_ctx, ssl_ctx};
-
+    beast::flat_buffer buffer;
 
 public:
     WebSocketConn(std::string host, uint16_t port, std::string path);
     void connect();
-
+    void send(std::string_view message);
+    std::string next();
+    void close();
 
 };
 }
